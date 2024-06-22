@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node server.js"
+    "start": "json-server --watch ./db.json"
   },
   "dependencies": {
     "express": "^4.19.2",
