@@ -193,13 +193,13 @@
       );
       if (!usuarioCorrente) {
         document.getElementById('login').innerHTML = '<a href="/login-page/login-page.html"  class="nav-link">Login</a>';
+      }else{
+        document.getElementById('login').innerHTML = '<a href="/usuario/perfil.html" class="nav-link">Meu Perfil</a>';
       }
-      document.getElementById('login').innerHTML = '<a href="/usuario/perfil.html" class="nav-link">Meu Perfil</a>';
-      
-      document.getElementById("open-popup-btn").addEventListener("click", exibe);
     }
-
-    //window.addEventListener("load", initPage);
+    
+    document.getElementById("open-popup-btn").addEventListener("click", exibe);
+    window.addEventListener("load", initPage);
 
   </script>
 </body>
