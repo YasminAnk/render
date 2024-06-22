@@ -1,0 +1,160 @@
+{
+  "usuarios": [
+    {
+      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "senha": "123",
+      "nome": "admin",
+      "email": "admin@teste.com"
+    },
+    {
+      "id": "da22e03a-cc09-4222-aa44-1475acaab28d",
+      "senha": "111",
+      "nome": "yasmin",
+      "email": "yas@email"
+    },
+    {
+      "id": "b866c4ab-73de-47c7-a6ed-932d041b9f82",
+      "senha": "123",
+      "nome": "lucas",
+      "email": "lucas@"
+    },
+    {
+      "id": "4775bbc0-1d46-4974-affc-7e35f1f148b3",
+      "senha": "123",
+      "nome": "Lucas",
+      "email": "aaa@gmail.com"
+    },
+    {
+      "id": "e43d6e0a-6170-4d1c-a7dc-9521e2b907e9",
+      "senha": "123",
+      "nome": "Lucas",
+      "email": "aaa1@gmail.com"
+    },
+    {
+      "id": "ac60179a-9473-4541-9028-e23b331044c7",
+      "senha": "123",
+      "nome": "admin",
+      "email": "admin"
+    },
+    {
+      "id": "8e0ed597-0c6a-4216-b61f-f9d9a09a7415",
+      "senha": "123",
+      "nome": "admin",
+      "email": "admin@"
+    }
+  ],
+  "medicamentos": [
+    {
+      "user_id": "b866c4ab-73de-47c7-a6ed-932d041b9f82",
+      "nome": "teste",
+      "quantidade": "2",
+      "date": "2024-06-09",
+      "horario": "09:00",
+      "observacao": "1 capsula",
+      "id": 2
+    },
+    {
+      "user_id": "4775bbc0-1d46-4974-affc-7e35f1f148b3",
+      "nome": "aaaa",
+      "quantidade": "2",
+      "horario": "02:01",
+      "observacao": "a",
+      "id": 3
+    },
+    {
+      "user_id": "b866c4ab-73de-47c7-a6ed-932d041b9f82",
+      "nome": "oi",
+      "quantidade": "2",
+      "horario": "00:00",
+      "observacao": "tomar 2 comprimidos",
+      "id": 4
+    },
+    {
+      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "nome": "edson",
+      "quantidade": "2",
+      "horario": "17:30",
+      "observacao": "tomar 2 comprimidos",
+      "id": 5
+    },
+    {
+      "user_id": "8e0ed597-0c6a-4216-b61f-f9d9a09a7415",
+      "nome": "dipirona",
+      "quantidade": "1",
+      "horario": "10:00",
+      "observacao": "1 comprimido",
+      "id": 6
+    },
+    {
+      "user_id": "8e0ed597-0c6a-4216-b61f-f9d9a09a7415",
+      "nome": "teste",
+      "quantidade": "2",
+      "horario": "07:00",
+      "observacao": "",
+      "id": 7
+    },
+    {
+      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "nome": "",
+      "quantidade": "",
+      "horario": "",
+      "observacao": "",
+      "id": 8
+    },
+    {
+      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "nome": "ibuprofeno",
+      "quantidade": "2",
+      "horario": "12:00",
+      "observacao": "2 capsulas dissolvidas na colher",
+      "id": 9
+    },
+    {
+      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "nome": "",
+      "quantidade": "",
+      "horario": "",
+      "observacao": "",
+      "id": 10
+    },
+    {
+      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "nome": "teste popup",
+      "quantidade": "1",
+      "horario": "18:00",
+      "observacao": "",
+      "id": 11
+    },
+    {
+      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "nome": "teste",
+      "quantidade": "12",
+      "horario": "08:00",
+      "observacao": "",
+      "id": 12
+    },
+    {
+      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "nome": "teste",
+      "quantidade": "1",
+      "date": "2024-06-09",
+      "horario": "09:00",
+      "observacao": "",
+      "id": 13
+    }
+  ],
+  "dicas": [
+    {
+      "id": 1,
+      "conteudo": "dicas01.html"
+    },
+    {
+      "id": 2,
+      "conteudo": "dicas02.html"
+    },
+    {
+      "id": 3,
+      "conteudo": "dicas03.html"
+    }
+  ]
+}
