@@ -2,7 +2,15 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 10000;
 
+const jsonServer = require("json-server");
+const router = jsonServer.router("./db.json");
+
 app.use(express.static(__dirname));
+
+app.use(cors());
+app.use(middlewares);
+app.use(router);
+
 
 app.get('/', function(req, res){
     res.sendFile(__dirname +'index.html');
