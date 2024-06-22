@@ -1,3 +1,6 @@
+const cors = require("cors");
+const middlewares = jsonServer.defaults();
+
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 10000;
@@ -8,6 +11,8 @@ const router = jsonServer.router("./db.json");
 app.use(express.static(__dirname));
 
 app.use(router);
+app.use(cors());
+app.use(middlewares);
 
 
 app.get('/', function(req, res){
