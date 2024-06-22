@@ -1,0 +1,98 @@
+body {
+    background-color: #e7fbff;
+  }
+  
+  
+  .box {
+    background-color: white;
+    padding: 1.5%;
+    margin: 20px;
+    width: 300px;
+    height: 350px;
+    border: 0.1px solid #ccc;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  
+  .box:hover {
+    border: 2px solid #24aeda;
+  }
+  
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .box {
+    background-color: white;
+    padding: 1.5%;
+    margin: 20px;
+    width: 530px;
+    height: 600px;
+    border: 0.1px solid #ccc;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  
+  
+  .box.conteudo {
+    background-color: white;
+    padding: 1.5%;
+    width: 100%;
+    height: auto;
+    min-height: 900px;
+    border: 0.1px solid #ccc;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  
+  .label {
+    flex: 1;
+    text-align: center;
+    background-color: #24aeda;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  
+  @media (max-width: 760px) {
+    .labels {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+  
+    .label {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+  

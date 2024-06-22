@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>60+ Tech</title>
+    <link rel="stylesheet" href="/css/styles-index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <span class="material-symbols-outlined seta"
+        ><a href="../index.html">arrow_back</a></span
+      >
+      <nav class="navbar">
+        <div class="logo">
+          <img src="../../img/logo.png" alt="Logo 60+ Tech" />
+        </div>
+        <span class="detalhe-01"></span>
+        <span class="detalhe-02"></span>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../sobre-nos.html" class="nav-link">Sobre nós</a>
+          </li>
+          <li class="nav-item">
+            <a href="../login-page/login-page.html" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="../registration page/registration page.html"
+              class="other-1"
+              class="nav-link"
+              >Registrar-se</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <style>
+        html,
+        body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+        }
+
+        body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+        }
+
+        main {
+          flex: 1;
+        }
+
+        footer {
+          background-color: #333;
+          color: #fff;
+          padding: 10px 0;
+          text-align: center;
+        }
+      </style>
+      <h1>Conselho do Dia</h1>
+      <div id="advice">Clique no botão para obter um conselho!</div>
+      <button class="main-btn" onclick="getRandomAdvice()">
+        Obter Conselho
+      </button>
+
+      <script>
+        const advices = [
+          "Nunca é tarde para aprender algo novo.",
+          "A paciência é uma virtude, pratique-a diariamente.",
+          "Sorria para a vida e a vida sorrirá de volta.",
+          "Cuide da sua saúde mental com a mesma importância que cuida da física.",
+          "A tecnologia é uma aliada, use-a ao seu favor.",
+          "Estar conectado não significa estar presente, valorize os momentos offline.",
+          "Leia livros e explore novos mundos sem sair de casa.",
+          "Acredite no seu potencial e vá atrás dos seus sonhos.",
+          "Faça uma atividade física todos os dias, seu corpo agradecerá.",
+          "Aprender a usar a internet pode abrir novas portas e oportunidades.",
+          "Use senhas fortes e diferentes para cada conta online.",
+          "Não compartilhe informações pessoais em redes sociais.",
+          "Verifique a fonte das notícias antes de acreditar nelas.",
+          "Utilize antivírus e mantenha-o atualizado.",
+          "Desconfie de e-mails e mensagens de remetentes desconhecidos.",
+          "Aprenda a usar a barra de pesquisa para encontrar informações rapidamente.",
+          "Ajuste o tamanho do texto no navegador para melhorar a leitura.",
+          "Faça pausas regulares para descansar os olhos ao usar o computador.",
+          "Use marcadores para salvar seus sites favoritos.",
+          "Aprenda a identificar sites seguros pelo ícone de cadeado na barra de endereços.",
+          "Nunca clique em links suspeitos em e-mails ou mensagens.",
+          "Saiba como limpar o histórico e os cookies do navegador.",
+          "Utilize redes Wi-Fi seguras, evite redes públicas para transações sensíveis.",
+          "Ative a verificação em duas etapas para maior segurança nas contas.",
+          "Pesquise tutoriais em vídeo para aprender novas habilidades online.",
+          "Participe de grupos em redes sociais para trocar experiências e aprender mais.",
+          "Desligue o computador à noite para economizar energia.",
+          "Mantenha seus dispositivos atualizados para maior segurança.",
+          "Faça backup de arquivos importantes regularmente.",
+          "Evite usar a mesma senha para diferentes contas.",
+          "Tenha cuidado ao baixar arquivos da internet.",
+          "Pesquise por avaliações antes de comprar online.",
+          "Aprenda a usar os filtros de busca para resultados mais precisos.",
+          "Desative notificações desnecessárias para evitar distrações.",
+          "Aproveite as configurações de acessibilidade do seu dispositivo.",
+          "Organize seus e-mails em pastas para melhor gestão.",
+          "Seja educado e respeitoso nas interações online.",
+          "Evite compartilhar sua localização nas redes sociais.",
+          "Desconfie de ofertas que parecem boas demais para ser verdade.",
+          "Use aplicativos de anotações para se organizar.",
+          "Explore podcasts e audiolivros como fontes de aprendizado.",
+          "Proteja seu computador com uma senha segura.",
+          "Aprenda a usar comandos de voz para facilitar a navegação.",
+        ];
+
+        function getRandomAdvice() {
+          const randomIndex = Math.floor(Math.random() * advices.length);
+          const advice = advices[randomIndex];
+          document.getElementById("advice").textContent = advice;
+        }
+
+        //api: https://api.adviceslip.com/
+      </script>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <a class="contato" href=""
+              ><span class="material-icons orange">phone</span> Contato:
+            </a>
+          </li>
+          <li>
+            <a class="email" href=""
+              ><span class="material-symbols-outlined mail">mail</span>
+              60+tech@gmail.com</a
+            >
+          </li>
+          <li>
+            <a
+              class="githubLink"
+              href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t5-60tech"
+              target="_blank"
+            >
+              <i
+                class="fa fa-github"
+                style="font-size: 28px; color: #ecae2a"
+              ></i>
+              GitHub do projeto</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <p class="copyright">
+        2024 60+ TECH - Todos Direitos Reservados
+        <span class="material-icons md-18 orange">copyright</span>
+      </p>
+    </footer>
+    <script src="menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+body {
+    background-color: #e7fbff;
+  }
+  
+  
+  .btn.tutoriais a,
+  .btn.compartilhe a,
+  .btn.avalie a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  
+  .box {
+    background-color: white;
+    padding: 1.5%;
+    margin: 20px;
+    width: 300px;
+    height: 350px;
+    border: 0.1px solid #ccc;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  
+  .box:hover {
+    border: 2px solid #24aeda;
+  }
+  
+  
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .box {
+    background-color: white;
+    padding: 1.5%;
+    margin: 20px;
+    width: 530px;
+    height: 600px;
+    border: 0.1px solid #ccc;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  
+  
+  .box.conteudo {
+    background-color: white;
+    padding: 1.5%;
+    width: 100%;
+    height: 100%;
+    border: 0.1px solid #ccc;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  
+  .form-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  
+  .btn {
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 450px;
+    height: 80px;
+    background-color: #ecae2a !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .btn:hover {
+    background-color: #c88e11 !important;
+  }
+  
+  
+  form label {
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #24aeda;
+    border-radius: 6px;
+    padding: 10px 40px;
+    display: inline-block;
+    width: calc(100% - 20px);
+    max-width: 300px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  
+  form input {
+    width: 65%;
+    height: 45px;
+  }
+  
+  
+  #observacao {
+    height: 170px;
+  }
+  
+  
+  #obs-btn {
+    padding: 70px;
+  }
+  

@@ -1,0 +1,124 @@
+body {
+  background-color: #e7fbff;
+}
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%;
+  height: 55px;
+  font-size: 1.2rem;
+  background-color: #24aeda !important;
+}
+
+.btn:hover {
+  background-color: #288c9a !important;
+}
+
+.btn a,
+.btn.compartilhe a,
+.btn.avalie a {
+  text-decoration: none;
+  color: #000;
+}
+
+.box {
+  background-color: white;
+  padding: 1.5%;
+  margin: 20px;
+  width: 300px;
+  height: 350px;
+  border: 0.1px solid #ccc;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.box.tutoriais:hover {
+  border: 2px solid #24aeda;
+}
+
+.box p {
+  padding-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  background-color: white;
+  padding: 1.5%;
+  margin: 20px;
+  width: 530px;
+  height: 600px;
+  border: 0.1px solid #ccc;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.box.conteudo {
+  background-color: white;
+  padding: 1.5%;
+  width: 100%;
+  height: 100%;
+  border: 0.1px solid #ccc;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.box img {
+  padding-bottom: 10px;
+  width: 100%;
+  height: 250px;
+}
+
+.btn.avalie,
+.btn.compartilhe {
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 40%;
+  height: 55px;
+  font-size: 1.2rem;
+  background-color: #24aeda !important;
+  margin-right: 4%;
+  transition-duration: 0.4s;
+}
+
+.avalie:hover {
+  background-color: #288c9a !important;
+}
+
+.compartilhe:hover {
+  background-color: #288c9a !important;
+}
+
+@media (max-width: 768px) {
+  .column {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .info-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

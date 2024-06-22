@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        />
+        <link rel="stylesheet" href="./css/styles-index.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <title>Formulário login</title>
+    </head>
+
+    <body>
+        <header>
+            <button class="back-button">
+                <a href="../index.html"
+                    ><i class="material-icons">arrow_back</i></a
+                >
+            </button>
+            <div class="logo">
+                <img src="logo.png" alt="Logo 60+ Tech" />
+            </div>
+            <nav class="navbar">
+                <span class="detalhe-01"></span>
+                <span class="detalhe-02"></span>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../sobre-nos.html" class="nav-link"
+                            >Sobre nós</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a href="#login" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a
+                            href="../registration page/registration page.html"
+                            class="other-1"
+                            class="nav-link"
+                            >Registrar-se</a
+                        >
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="form-image">
+                <img
+                    src="WhatsApp Image 2024-04-24 at 20.59.29_65083a07.jpg"
+                    alt=""
+                />
+            </div>
+            <div class="form">
+                <form
+                    action="#"
+                    id="login-form"
+                    method="post"
+                    onsubmit="loginUser (this)"
+                >
+                    <div class="form-header">
+                        <div class="title">
+                            <h1>FAÇA SEU LOGIN</h1>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" required />
+                        </div>
+
+                        <div class="input-box">
+                            <label for="password">Senha</label>
+                            <input id="password" type="password" required />
+                        </div>
+                    </div>
+
+                    <div class="continue-button" type="submit">
+                        <button id="login">ENTRAR</button>
+                    </div>
+                    <p class="temlogin">
+                        Não tem uma conta?
+                        <a href="../registration page/registration page.html">
+                            Cadastre-se</a
+                        >
+                    </p>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="contato" href=""
+                            ><span class="material-icons orange">phone</span>
+                            Contato:
+                        </a>
+                    </li>
+                    <li>
+                        <a class="email" href=""
+                            ><span class="material-symbols-outlined mail"
+                                >mail</span
+                            >
+                            60+tech@gmail.com</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="githubLink"
+                            href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t5-60tech"
+                            target="_blank"
+                        >
+                            <i
+                                class="fa fa-github"
+                                style="font-size: 28px; color: #ecae2a"
+                            ></i>
+                            GitHub do projeto</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <p class="copyright">
+                2024 60+ TECH - Todos Direitos Reservados
+                <span class="material-icons md-18 orange">copyright</span>
+            </p>
+        </footer>
+        <script src="menu.js"></script>
+        <script src="./login.js"></script>
+        <script>
+            // Declara uma função para processar o formulário de login
+            function processaFormLogin(event) {
+                // Obtem os dados de login e senha a partir do formulário de login
+                var username = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+
+                // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+                resultadoLogin = loginUser(username, password);
+                if (resultadoLogin) {
+                    window.location.href = "../index.html";
+                } else {
+                    // Se login falhou, avisa ao usuário
+                    alert("Usuário ou senha incorretos.");
+                }
+            }
+
+            // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
+            document
+                .getElementById("login")
+                .addEventListener("click", processaFormLogin);
+        </script>
+    </body>
+</html>

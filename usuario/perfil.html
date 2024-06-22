@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>60+ Tech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet" href="../css/perfil.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+  <header style="background-color: white;">
+    <div class="voltar">
+      <img src="../img/voltar.png" alt="Logo 60+ Tech"></img>
+  </div>
+
+    <div class="logo">
+      <img src="../img/logo.png" alt="Logo 60+ Tech">
+    </div>
+    <span class="material-symbols-outlined menu">
+      menu
+    </span>
+      <nav>
+        <span class="detalhe-01"></span>
+        <span class="detalhe-02"></span>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre Nós</a></li>
+          <li><a id="login">Meu Perfil</a></li>
+          <li><a href="#registrar" class="other-1">Registrar-se</a></li>
+        </ul>
+      </nav>
+  </header>
+  <DIV CLASS ="titulo">Meu Perfil</DIV>
+  <main>
+    
+    <section>
+      <h1 style="font-weight: normal;">Dados do usuário</h1>
+      <div class="user-data">
+        <label for="nome">Nome:</label>
+        <div class="cards"><a id="nome"></a></div>
+
+        <label for="email">E-mail:</label>
+         <div class="cards"><a id="email"></a></div>
+
+      </div>
+    </section>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li><a class="contato" href=""><span class="material-icons orange">phone</span> Contato: </a></li>
+        <li><a class="email" href=""><span class="material-symbols-outlined mail">mail</span> 60+tech@gmail.com</a></li>
+        <li><a class="githubLink" href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t5-60tech"
+            target="_blank"> <i class="fa fa-github" style="font-size:28px;color:#ECAE2A"></i> GitHub do projeto</a>
+        </li>
+      </ul>
+    </nav>
+    <p class="copyright"> 2024 60+ TECH - Todos Direitos Reservados <span
+        class="material-icons md-18 orange">copyright</span></p>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script>
+    function exibe() {
+      // Popula a tabela com os registros do banco de dados
+      fetch("/usuarios")
+        .then((response) => {
+          console.log("Resposta da API:", response);
+          if (!response.ok) {
+            throw new Error("Erro ao buscar dados da API");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          // Obtém o usuário corrente
+          const usuarioCorrente = JSON.parse(
+            sessionStorage.getItem("usuarioCorrente"),
+          );
+          // Filtra o usuario com base no userId
+          const usuario = data.filter(
+            (usuario) => usuario.id === usuarioCorrente.id,
+          );
+
+          document.getElementById('nome').innerHTML = usuarioCorrente.nome;
+          document.getElementById('email').innerHTML = usuarioCorrente.email;
+  
+        })
+        .catch((error) => {
+          console.error(
+            "Erro ao ler medicamentos via API JSONServer:",
+            error,
+          );
+          alert("Erro ao buscar dados dos medicamentos");
+        });
+    }
+    function initPage() {
+      exibe();
+
+      const usuarioCorrente = JSON.parse(
+        sessionStorage.getItem("usuarioCorrente"),
+      );
+      if (!usuarioCorrente) {
+        document.getElementById('login').innerHTML = '<a href="/login-page/login-page.html"  class="nav-link">Login</a>';
+      }
+      document.getElementById('login').innerHTML = '<a href="/usuario/perfil.html" class="nav-link">Meu Perfil</a>';
+    }
+    window.addEventListener("load", initPage);
+  </script>
+</body>
+
+</html>
