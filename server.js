@@ -7,8 +7,6 @@ const router = jsonServer.router("./db.json");
 
 app.use(express.static(__dirname));
 
-app.use(cors());
-app.use(middlewares);
 app.use(router);
 
 
