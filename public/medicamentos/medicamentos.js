@@ -8,6 +8,13 @@ var usuarioCorrente = {};
 
 // Inicializa o usuarioCorrente e banco de dados de usuários da aplicação de Login
 function initLoginApp() {
+    const usuarioCorrente = JSON.parse(
+        sessionStorage.getItem("usuarioCorrente"),
+      );
+      if (!usuarioCorrente) {
+        displayMessage("É necessário fazer login para verificar os medicamentos cadastrados!");
+          window.location.href("../login-page/login-page.html");
+      } else {
     fetch(apiUrl)
         .then((response) => {
             console.log("Resposta da API:", response); // Adiciona log para verificar a resposta da API
@@ -27,6 +34,7 @@ function initLoginApp() {
             );
             displayMessage("Erro ao ler medicamentos");
         });
+      }
 }
 
 
