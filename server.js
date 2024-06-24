@@ -6,7 +6,7 @@ const middlewares = jsonServer.defaults();
 const app = express();
 const port = process.env.PORT || 10000;
 
-const router = jsonServer.router('./db/db.json');
+const router = jsonServer.router('./public/db.json');
 app.use(middlewares);
 app.use(router);
 
