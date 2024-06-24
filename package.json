@@ -1,7 +1,7 @@
 {
-  "name": "express-hello-world",
+  "name": "60-mais-tech",
   "version": "1.0.0",
-  "description": "Express Hello World on Render",
+  "description": "60 + Tech on Render",
   "main": "server.js",
   "author": "Render Developers",
   "license": "MIT",
