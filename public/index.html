@@ -152,7 +152,6 @@ function initPage() {
   } else {
     // Se houver usuário corrente, exibe o link de perfil
     document.getElementById('login').innerHTML = '<a href="./usuario/perfil.html" class="nav-link">Meu Perfil</a>';
-    
   }
 }
 
@@ -192,14 +191,17 @@ function exibe(event) {
 // Listener para o evento de carregamento da página
 window.addEventListener("load", initPage);
 
-// Adiciona um evento ao botão para abrir o popup de medicamentos
+// Adiciona um evento ao botão para verificar o login antes de abrir o popup
 document.getElementById("open-popup-btn").addEventListener("click", function(event) {
-  if (!usuarioCorrenteJSON) {
-    displayMessage("É necessário fazer login para verificar os medicamentos cadastrados!");
-    event.preventDefault(); // Previne a ação padrão do botão
-  } else {
-    exibe(event); // Chama a função para carregar e exibir os medicamentos
-  }
+    const usuarioCorrenteJSON = sessionStorage.getItem("usuarioCorrente");
+    if (!usuarioCorrenteJSON) {
+        displayMessage("É necessário fazer login para verificar os medicamentos cadastrados!");
+        window.location.href = "./login-page/login-page.html";
+        event.preventDefault(); // Previne a ação padrão do botão
+    } else {
+        // Chama a função para carregar e exibir os medicamentos
+        exibe(event);
+    }
 });
 
   </script>
