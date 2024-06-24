@@ -175,6 +175,7 @@ function exibe(event) {
         const tr = document.createElement("tr");
         tr.innerHTML = `
           <td>${medicamento.nome}</td>
+          <td>${medicamento.date}</td>
           <td>${medicamento.quantidade}</td>
           <td>${medicamento.horario}</td>
           <td>${medicamento.observacao || "-"}</td>
