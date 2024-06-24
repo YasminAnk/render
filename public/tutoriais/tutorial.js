@@ -1,27 +1,37 @@
-// Função para carregar os dados do tutorial do arquivo JSON
-function carregarDadosTutorial() {
-  fetch('../db.json') // Caminho para o arquivo db.json
-    .then(response => response.json())
-    .then(data => {
-      // Considerando que há apenas um tutorial no array tutoriais
-      const tutorial = data.tutoriais[0];
+const apiUrl = "/tutoriais";
 
-      // Atualizar o título do tutorial
-      const tituloElement = document.getElementById('tituloTutorial');
-      tituloElement.innerHTML = tutorial.titulo;
+// Objeto para o banco de dados de tutoriais baseado em JSON
+var db_tutoriais = {};
 
-      // Atualizar o texto do tutorial
-      const textoElement = document.getElementById('textoTutorial');
-      textoElement.innerHTML = tutorial.texto;
+// Objeto para o tutorial selecionado
+var tutorialSelecionado = {};
 
-      // Atualizar o link do vídeo
-      const videoElement = document.getElementById('videoTutorial');
-      videoElement.src = tutorial.video;
-    })
-    .catch(error => {
-      console.error('Erro ao carregar dados do tutorial:', error);
-    });
+function initLoginApp() {
+    // PARTE 1 - INICIALIZA ID DO TUTORIAL A PARTIR DE DADOS NO LOCAL STORAGE, CASO EXISTA
+    id = sessionStorage.getItem("tutorial");
+
+    // PARTE 2 - INICIALIZA BANCO DE DADOS DE TUTORIAIS
+    fetch(apiUrl)
+        .then((response) => response.json())
+        .then((data) => {
+            db_tutoriais = data;
+        })
+        .catch((error) => {
+            console.error("Erro ao ler tutoriais via API JSONServer:", error);
+            displayMessage("Erro ao ler tutoriais");
+        });
 }
 
-// Chamar a função para carregar os dados do tutorial ao carregar a página
-carregarDadosTutorial();
+function selectedTutorial(id) {
+  // Busca o tutorial no banco de dados pelo ID
+  const tutorial = db_tutoriais.find((t) => t.id == id);
+
+  // Atualiza o título, texto e vídeo na página
+  if (tutorial) {
+      document.getElementById("tituloTutorial").textContent = tutorial.titulo;
+      document.getElementById("textoTutorial").textContent = tutorial.texto;
+      document.getElementById("videoTutorial").src = tutorial.video;
+  } else {
+      console.error(`Tutorial com ID ${id} não encontrado.`);
+  }
+}
