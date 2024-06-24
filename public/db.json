@@ -156,5 +156,13 @@
       "id": 3,
       "conteudo": "dicas03.html"
     }
+  ],
+  "tutoriais": [
+    {
+      "titulo": "Como adicionar contatos no Whatsapp.",
+      "texto": "dicas01.html",
+      "video": "https://www.youtube.com/embed/tUM7hmdesBw?si=RDtqRxwa918HLHzh",
+      "avaliacao": 3.5
+    }
   ]
 }
