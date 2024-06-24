@@ -8,8 +8,8 @@ let db_medicamentos = [];
 function initLoginApp() {
     const usuarioCorrenteJSON = sessionStorage.getItem("usuarioCorrente");
     if (!usuarioCorrenteJSON) {
-        displayMessage("É necessário fazer login para verificar os medicamentos cadastrados!");
-        window.location.href = "./login-page/login-page.html"; // Redireciona para a página de login
+        //displayMessage("É necessário fazer login para verificar os medicamentos cadastrados!");
+        //window.location.href = "./login-page/login-page.html"; // Redireciona para a página de login
     } else {
         const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
         fetch(apiUrl)
