@@ -85,7 +85,7 @@
           ></iframe>
           <p>Como adicionar e encontrar os contatos no WhatsApp.</p>
           <br />
-          <button class="btn tutoriais">
+          <button id="1" class="btn tutoriais">
             <a href="addContatos.html">
               <h3>Leia Mais</h3>
             </a>
@@ -104,7 +104,7 @@
           ></iframe>
           <p>Como RESPONDER e ENCAMINHAR (compartilhar) uma mensagem.</p>
           <br />
-          <button class="btn tutoriais">
+          <button id="2" class="btn tutoriais">
             <a href="reply.html">
               <h3>Leia Mais</h3>
             </a>
@@ -123,7 +123,7 @@
           ></iframe>
           <p>Como APAGAR mensagens e conversas no Whatsapp.</p>
           <br />
-          <button class="btn tutoriais">
+          <button id="3" class="btn tutoriais">
             <a href="delete.html">
               <h3>Leia Mais</h3>
             </a>
@@ -145,7 +145,7 @@
             status do Whatsapp.
           </p>
           <br />
-          <button class="btn tutoriais">
+          <button id="4" class="btn tutoriais">
             <a href="status.html">
               <h3>Leia Mais</h3>
             </a>
@@ -188,5 +188,21 @@
       </p>
     </footer>
     <script src="/src/js/menu.js"></script>
+    <script>
+      //pegar o id do botão selecionado e inserir no sessionStorage
+      document.querySelectorAll('.btn.tutoriais').forEach(btn => {
+      btn.addEventListener('click', function(event) {
+        event.preventDefault(); // Evitar comportamento padrão do link
+
+        // Obter o ID do botão clicado
+        let id = event.currentTarget.id;
+
+        sessionStorage.setItem(
+                "tutorial",
+                id,
+            );
+        });
+      });
+    </script>
   </body>
 </html>
