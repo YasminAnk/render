@@ -1,4 +1,4 @@
-t<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -142,62 +142,55 @@ t<!DOCTYPE html>
   <script src="menu.js"></script>
   <script src="./medicamentos/medicamentos.js"></script>
   <script>
-    function exibe(event) {
-      // Popula a tabela com os registros do banco de dados
-      fetch(apiUrl)
-        .then((response) => {
-          console.log("Resposta da API:", response);
-          if (!response.ok) {
-            throw new Error("Erro ao buscar dados da API");
-          }
-          return response.json();
-        })
-        .then((data) => {
-          // Limpa o conteúdo atual da tabela
-          document.getElementById("medicamentos").innerHTML = "";
+    // Função para inicializar a página
+function initPage() {
+  // Verifica se há um usuário corrente no sessionStorage
+  const usuarioCorrenteJSON = sessionStorage.getItem("usuarioCorrente");
+  if (!usuarioCorrenteJSON) {
+    // Se não houver usuário corrente, exibe o link de login
+    document.getElementById('login').innerHTML = '<a href="./login-page/login-page.html" class="nav-link">Login</a>';
+  } else {
+    // Se houver usuário corrente, exibe o link de perfil
+    document.getElementById('login').innerHTML = '<a href="./usuario/perfil.html" class="nav-link">Meu Perfil</a>';
+    // Adiciona um evento ao botão para abrir o popup de medicamentos
+    document.getElementById("open-popup-btn").addEventListener("click", exibe);
+  }
+}
 
-          // Obtém o usuário corrente
-          const usuarioCorrente = JSON.parse(
-            sessionStorage.getItem("usuarioCorrente"),
-          );
-          // Filtra os medicamentos com base no userId
-          const medicamentosDoUsuario = data.filter(
-            (medicamento) => medicamento.user_id === usuarioCorrente.id,
-          );
-
-          // Itera sobre os dados dos medicamentos do usuário e cria linhas na tabela para cada um
-          medicamentosDoUsuario.forEach((medicamento) => {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `
-                <td>${medicamento.nome}</td>
-                <td>${medicamento.quantidade}</td>
-                <td>${medicamento.horario}</td>
-                <td>${medicamento.observacao || " - "}</td> <!-- Verifica se observacoes está definido, se não, usa uma string vazia -->
-              `;
-            document.getElementById("medicamentos").appendChild(tr);
-          });
-          showPopup(); 
-        })
-        .catch((error) => {
-          console.error(
-            "Erro ao ler medicamentos via API JSONServer:",
-            error,
-          );
-          alert("Erro ao buscar dados dos medicamentos");
-        });
-    }
-    function initPage() {
-      // PARTE 1 - INICIALIZA USUARIOCORRENTE A PARTIR DE DADOS NO LOCAL STORAGE, CASO EXISTA
-      const usuarioCorrente = JSON.parse(
-        sessionStorage.getItem("usuarioCorrente"),
-      );
-      if (!usuarioCorrente) {
-        document.getElementById('login').innerHTML = '<a href="./login-page/login-page.html"  class="nav-link">Login</a>';
-      }else{
-        document.getElementById('login').innerHTML = '<a href="./usuario/perfil.html" class="nav-link">Meu Perfil</a>';
-        document.getElementById("open-popup-btn").addEventListener("click", exibe);
+// Função para carregar os medicamentos do usuário e exibir no popup
+function exibe(event) {
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("Erro ao buscar dados da API");
       }
-    window.addEventListener("load", initPage);
+      return response.json();
+    })
+    .then(data => {
+      const usuarioCorrente = JSON.parse(sessionStorage.getItem("usuarioCorrente"));
+      const medicamentosDoUsuario = data.filter(medicamento => medicamento.user_id === usuarioCorrente.id);
+      const tbody = document.getElementById("medicamentos");
+      tbody.innerHTML = ""; // Limpa o conteúdo atual da tabela
+      medicamentosDoUsuario.forEach(medicamento => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${medicamento.nome}</td>
+          <td>${medicamento.quantidade}</td>
+          <td>${medicamento.horario}</td>
+          <td>${medicamento.observacao || "-"}</td>
+        `;
+        tbody.appendChild(tr); // Adiciona a linha à tabela
+      });
+      showPopup(); // Exibe o popup com os medicamentos
+    })
+    .catch(error => {
+      console.error("Erro ao ler medicamentos via API:", error);
+      alert("Erro ao buscar dados dos medicamentos");
+    });
+}
+
+// Listener para o evento de carregamento da página
+window.addEventListener("load", initPage);
 
   </script>
 </body>
