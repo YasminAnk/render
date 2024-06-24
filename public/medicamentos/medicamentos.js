@@ -1,92 +1,81 @@
+// Variável para armazenar a URL da API de medicamentos
 const apiUrl = "/medicamentos";
 
-// Objeto para o banco de dados de usuários baseado em JSON
-var db_medicamentos = {};
+// Objeto para o banco de dados de medicamentos
+let db_medicamentos = [];
 
-// Objeto para o usuário corrente
-var usuarioCorrente = {};
-
-// Inicializa o usuarioCorrente e banco de dados de usuários da aplicação de Login
+// Função para inicializar o aplicativo de login
 function initLoginApp() {
-    const usuarioCorrente = JSON.parse(
-        sessionStorage.getItem("usuarioCorrente"),
-      );
-      if (!usuarioCorrente) {
+    const usuarioCorrenteJSON = sessionStorage.getItem("usuarioCorrente");
+    if (!usuarioCorrenteJSON) {
         displayMessage("É necessário fazer login para verificar os medicamentos cadastrados!");
-          window.location.href("../login-page/login-page.html");
-      } else {
-    fetch(apiUrl)
-        .then((response) => {
-            console.log("Resposta da API:", response); // Adiciona log para verificar a resposta da API
-            if (!response.ok) {
-                throw new Error("Erro ao buscar dados da API");
-            }
-            return response.json();
-        })
-        .then((data) => {
-            db_medicamentos = data;
-            //console.log("Medicamentos carregados:", db_medicamentos); // Adiciona log para verificar os dados carregados
-        })
-        .catch((error) => {
-            console.error(
-                "Erro ao ler medicamentos via API JSONServer:",
-                error,
-            );
-            displayMessage("Erro ao ler medicamentos");
-        });
-      }
-}
-
-
-function addMedicamento(nome, quantidade, date, horario, observacao) {
-    let usuarioCorrenteJSON = sessionStorage.getItem("usuarioCorrente");
-    if (usuarioCorrenteJSON) {
-        let usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
-
-        let medicamento = {
-            user_id: usuarioCorrente.id,
-            nome: nome,
-            quantidade: quantidade,
-            date: date,
-            horario: horario,
-            observacao: observacao,
-        };
-
-        fetch(apiUrl, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(medicamento),
-        })
+        window.location.href = "./login-page/login-page.html"; // Redireciona para a página de login
+    } else {
+        const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+        fetch(apiUrl)
             .then((response) => {
-                console.log("Resposta do POST da API:", response); // Adiciona log para verificar a resposta do POST da API
                 if (!response.ok) {
-                    throw new Error("Erro ao inserir medicamento");
+                    throw new Error("Erro ao buscar dados da API");
                 }
                 return response.json();
             })
             .then((data) => {
-                db_medicamentos.push(medicamento);
-                console.log("Medicamento adicionado:", medicamento); // Adiciona log para verificar o medicamento adicionado
-                displayMessage("Medicamento inserido com sucesso");
+                db_medicamentos = data;
+                console.log("Medicamentos carregados:", db_medicamentos);
             })
             .catch((error) => {
-                console.error(
-                    "Erro ao inserir medicamento via API JSONServer:",
-                    error,
-                );
-                displayMessage("Erro ao inserir medicamento");
+                console.error("Erro ao ler medicamentos via API:", error);
+                displayMessage("Erro ao ler medicamentos");
             });
-    } else {
-        alert("É preciso fazer login primeiro!");
     }
+}
+
+// Função para adicionar um medicamento
+function addMedicamento(nome, quantidade, date, horario, observacao) {
+    const usuarioCorrenteJSON = sessionStorage.getItem("usuarioCorrente");
+    if (!usuarioCorrenteJSON) {
+        displayMessage("É preciso fazer login primeiro!");
+        return; // Retorna se não houver usuário logado
+    }
+    const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+
+    const medicamento = {
+        user_id: usuarioCorrente.id,
+        nome: nome,
+        quantidade: quantidade,
+        date: date,
+        horario: horario,
+        observacao: observacao,
+    };
+
+    fetch(apiUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(medicamento),
+    })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Erro ao inserir medicamento");
+            }
+            return response.json();
+        })
+        .then((data) => {
+            db_medicamentos.push(medicamento);
+            console.log("Medicamento adicionado:", medicamento);
+            displayMessage("Medicamento inserido com sucesso");
+        })
+        .catch((error) => {
+            console.error("Erro ao inserir medicamento via API:", error);
+            displayMessage("Erro ao inserir medicamento");
+        });
 }
 
 // Função para exibir mensagens ao usuário
 function displayMessage(message) {
-    alert(message); // Ajuste isso conforme necessário para o seu aplicativo
+    alert(message);
 }
 
-// Inicializa as estruturas utilizadas pelo LoginApp
+// Inicializa o aplicativo de login ao carregar a página
 initLoginApp();
