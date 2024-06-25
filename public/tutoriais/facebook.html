@@ -33,7 +33,7 @@
   <body style="background-color: #e7fbff">
     <header>
       <span class="material-symbols-outlined seta"
-        ><a href="whatsapp.html">arrow_back</a></span
+        ><a href="tutoriais.html">arrow_back</a></span
       >
       <nav class="navbar">
         <div class="logo">
@@ -69,98 +69,25 @@
         </div>
       </nav>
     </header>
-    <h4 style="margin-left: 2%">TUTORIAIS SOBRE O WHATSAPP</h4>
     <main>
+      <h3 style="text-align: center"><b>TUTORIAIS SOBRE O FACEBOOK.</b></h3>
       <div class="cards">
-        <div class="box conteudo">
-          <p id="tituloTutorial" style="font-size: xx-large">
-            Como adicionar contatos no Whatsapp.
-          </p>
-          <br />
-          <p id="textoTutorial">
-            Precisa adicionar um novo contato? Ou adicionou um novo numero mas
-            nao está encontrando a pessoa no Whatsapp? <br /><br />
-            Existem várias maneiras de adicionar um contato:<br /><br />
-            <b>Adicionando contato pela agenda do seu celular</b>
-          </p>
-
-          <div class="conteudo">
-            <p>1. No menu de aplicativos, pressione <b>Contatos</b>.</p>
-            <p>2. Pressione <b>Novo contato</b> ou <b>Novo</b>.</p>
-            <p>
-              3. Insira o nome e o número do telefone do contato e, em seguida,
-              pressione <b>SALVAR</b>.
-            </p>
-            <p>
-              4. O contato deve aparecer automaticamente na lista de contatos do
-              WhatsApp. Se o contato não aparecer, abra o WhatsApp e pressione
-              <b>Nova conversa > Opções > Recarregar contatos</b>.
-            </p>
-          </div>
-          <br />
-          <p>Se mesmo assim não aparecer, tente o passo abaixo:</p>
-          <br />
-          <b>Adicionar contato ao criar uma nova conversa</b>
-          <br />
-          <div class="conteudo">
-            <p>1. Toque na aba <b>Conversas</b>.</p>
-            <p>
-              2. Toque no ícone<img
-                style="height: 50px; width: 50px"
-                src="https://static.xx.fbcdn.net/assets/?revision=1081416319613196&amp;name=android-new-chat&amp;density=1"
-              />
-              e, em seguida, em <b>Novo contato</b>.
-            </p>
-          </div>
-          <br />
-
-          <p>
-            <a
-              href="https://faq.whatsapp.com/5472030609512325/?cms_platform=android&helpref=platform_switcher&locale=pt_BR"
-              >Clique aqui</a
-            >
-            para ler mais conteúdos de contatos no Whatsapp.
-          </p>
-          <br /><iframe
-            id="videoTutorial"
-            width="900"
-            height="500"
-            src="https://www.youtube.com/embed/tUM7hmdesBw?si=RDtqRxwa918HLHzh"
+        <div class="box whatsapp">
+          <iframe
+            width="500"
+            height="315"
+            src="https://www.youtube.com/embed/Y_yBtsMG--c?si=rvWwFncRH11rpftH"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
+          <p>Como criar uma conta no Facebook.</p>
           <br />
-          <p>
-            Não se esqueça de deixar sua avaliação e compartilhar com os amigos!
-          </p>
-          <br /><button class="btn avalie">
-            <a href="">
-              <h3>Avalie</h3>
-            </a>
-          </button>
-          <input type="hidden" value="" class="flexy-product-review-rating" />
-          <button type="button" class="btn btn-star" onclick="sendRating('1')">
-            <i class="fa fa-star"></i>
-          </button>
-          <button type="button" class="btn btn-star" onclick="sendRating('2')">
-            <i class="fa fa-star"></i>
-          </button>
-          <button type="button" class="btn btn-star" onclick="sendRating('3')">
-            <i class="fa fa-star"></i>
-          </button>
-          <button type="button" class="btn btn-star" onclick="sendRating('4')">
-            <i class="fa fa-star"></i>
-          </button>
-          <button type="button" class="btn btn-star" onclick="sendRating('5')">
-            <i class="fa fa-star"></i>
-          </button>
-
-          <br /><br /><button class="btn compartilhe">
-            <a href="">
-              <h3>Compartilhe</h3>
+          <button id="leia-mais-btn" name="Como criar uma conta no Facebook." class="btn tutoriais"><a href="tutorial.html">
+            <h3>Leia Mais</h3>
+          </a> </button>
             </a>
           </button>
         </div>
@@ -201,6 +128,17 @@
       </p>
     </footer>
     <script src="/src/js/menu.js"></script>
-    <script src="../tutorial.js"></script>
+    <script>
+      // Seleciona o botão pelo ID
+      const leiaMaisBtn = document.getElementById('leia-mais-btn');
+  
+      // Adiciona um ouvinte de evento para o clique no botão
+      leiaMaisBtn.addEventListener('click', function() {
+        // Obtém o conteúdo do h3 dentro do botão
+        const nome = document.getElementById('leia-mais-btn').getAttribute('name');
+        // Armazena o ID em sessionStorage
+        sessionStorage.setItem('tutorial', nome);
+      });
+    </script>
   </body>
 </html>

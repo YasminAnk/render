@@ -113,9 +113,6 @@
     <p class="copyright"> 2024 60+ TECH - Todos Direitos Reservados <span class="material-icons md-18 orange">copyright</span></p>
   </footer>
   <button id="open-popup-btn" class="open-popup-btn">Seus Remédios</button>
-
- 
-      <button id="select-date-btn">Selecionar</button>
   </div>
   
   <div id="popup" class="popup">
@@ -135,6 +132,7 @@
         </tbody>
       </table>
         <button class="popup-btn" onclick="closePopup()">Ok, Fechar</button>
+        <button class="popup-btn" id="email">E-mail</button>
     </div>
   </div>
   <script src="dicas.js"></script>
@@ -166,14 +164,13 @@ function exibe(event) {
     })
     .then(data => {
       const usuarioCorrente = JSON.parse(sessionStorage.getItem("usuarioCorrente"));
-      const medicamentosDoUsuario = data.filter(medicamento => medicamento.user_id === usuarioCorrente.id);
+      const medicamentosDoUsuario = data.filter(medicamento => medicamento.user_id === usuarioCorrente.id && medicamento.date === "2024-06-24");
       const tbody = document.getElementById("medicamentos");
       tbody.innerHTML = ""; // Limpa o conteúdo atual da tabela
       medicamentosDoUsuario.forEach(medicamento => {
         const tr = document.createElement("tr");
         tr.innerHTML = `
           <td>${medicamento.nome}</td>
-          <td>${medicamento.date}</td>
           <td>${medicamento.quantidade}</td>
           <td>${medicamento.horario}</td>
           <td>${medicamento.observacao || "-"}</td>
@@ -204,6 +201,35 @@ document.getElementById("open-popup-btn").addEventListener("click", function(eve
     }
 });
 
+
+document.getElementById("email").addEventListener("click", function(event) {
+      // Dados do e-mail a serem enviados
+      const emailData = {
+        to: "yasminank@icloud.com", 
+        subject: "Assunto do E-mail",
+        text: "Conteúdo do E-mail",
+      };
+
+      // Envia uma solicitação POST para o servidor Node.js
+      fetch("/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(emailData),
+      })
+      .then(response => {
+        if (response.ok) {
+          alert("E-mail enviado com sucesso!");
+        } else {
+          throw new Error("Erro ao enviar e-mail");
+        }
+      })
+      .catch(error => {
+        console.error("Erro:", error);
+        //alert("Erro ao enviar e-mail");
+      });
+    });
   </script>
 </body>
 

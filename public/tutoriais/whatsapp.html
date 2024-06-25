@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -33,7 +33,7 @@
   <body style="background-color: #e7fbff">
     <header>
       <span class="material-symbols-outlined seta"
-        ><a href="../tutoriais.html">arrow_back</a></span
+        ><a href="tutoriais.html">arrow_back</a></span
       >
       <nav class="navbar">
         <div class="logo">
@@ -49,15 +49,16 @@
             <a href="../../sobre-nos.html" class="nav-link">Sobre nós</a>
           </li>
           <li class="nav-item">
-            <a href="../../login-page/login-page.html" class="nav-link"
+            <a
+              href="../../login-page/login-page.html"
+              class="nav-link"
               >Login</a
             >
           </li>
           <li class="nav-item">
             <a
               href="../../registration page/registration page.html"
-              class="other-1"
-              class="nav-link"
+              class="other-1 nav-link"
               >Registrar-se</a
             >
           </li>
@@ -85,8 +86,12 @@
           ></iframe>
           <p>Como adicionar e encontrar os contatos no WhatsApp.</p>
           <br />
-          <button id="1" class="btn tutoriais">
-            <a href="addContatos.html">
+          <button
+            id="leia-mais-btn-1"
+            name="Como adicionar contatos no Whatsapp."
+            class="btn tutoriais"
+          >
+            <a href="tutorial.html">
               <h3>Leia Mais</h3>
             </a>
           </button>
@@ -104,8 +109,12 @@
           ></iframe>
           <p>Como RESPONDER e ENCAMINHAR (compartilhar) uma mensagem.</p>
           <br />
-          <button id="2" class="btn tutoriais">
-            <a href="reply.html">
+          <button
+            id="leia-mais-btn-2"
+            name="Como encaminhar mensagens no Whatsapp."
+            class="btn tutoriais"
+          >
+            <a href="tutorial.html">
               <h3>Leia Mais</h3>
             </a>
           </button>
@@ -123,8 +132,12 @@
           ></iframe>
           <p>Como APAGAR mensagens e conversas no Whatsapp.</p>
           <br />
-          <button id="3" class="btn tutoriais">
-            <a href="delete.html">
+          <button
+            id="leia-mais-btn-3"
+            name="Como excluir mensagens e conversas no Whatsapp."
+            class="btn tutoriais"
+          >
+            <a href="tutorial.html">
               <h3>Leia Mais</h3>
             </a>
           </button>
@@ -145,8 +158,12 @@
             status do Whatsapp.
           </p>
           <br />
-          <button id="4" class="btn tutoriais">
-            <a href="status.html">
+          <button
+            id="leia-mais-btn-4"
+            name="Como usar o status do Whatsapp."
+            class="btn tutoriais"
+          >
+            <a href="tutorial.html">
               <h3>Leia Mais</h3>
             </a>
           </button>
@@ -189,18 +206,23 @@
     </footer>
     <script src="/src/js/menu.js"></script>
     <script>
-      //pegar o id do botão selecionado e inserir no sessionStorage
-      document.querySelectorAll('.btn.tutoriais').forEach(btn => {
-      btn.addEventListener('click', function(event) {
-        event.preventDefault(); // Evitar comportamento padrão do link
+      // Seleciona todos os botões de "Leia Mais" pela classe
+      const leiaMaisBtns = document.querySelectorAll('.btn.tutoriais');
 
-        // Obter o ID do botão clicado
-        let id = event.currentTarget.id;
+      // Adiciona um ouvinte de evento para cada botão de "Leia Mais"
+      leiaMaisBtns.forEach(btn => {
+        btn.addEventListener('click', function(event) {
+          // Evita o comportamento padrão de clique no link
+          event.preventDefault();
 
-        sessionStorage.setItem(
-                "tutorial",
-                id,
-            );
+          // Obtém o nome do tutorial do atributo 'name' do botão
+          const nomeTutorial = btn.getAttribute('name');
+
+          // Armazena o nome do tutorial no sessionStorage
+          sessionStorage.setItem('tutorial', nomeTutorial);
+
+          // Redireciona para a página de tutorial
+          window.location.href = btn.querySelector('a').getAttribute('href');
         });
       });
     </script>

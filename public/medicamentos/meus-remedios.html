@@ -98,10 +98,11 @@
           </div>
           <div class="form-buttons">
             <button class="btn remedios">
+              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" style="padding-right: 1.5%;"><path d="M448.67-280h66.66v-164H680v-66.67H515.33V-680h-66.66v169.33H280V-444h168.67v164Zm31.51 200q-82.83 0-155.67-31.5-72.84-31.5-127.18-85.83Q143-251.67 111.5-324.56T80-480.33q0-82.88 31.5-155.78Q143-709 197.33-763q54.34-54 127.23-85.5T480.33-880q82.88 0 155.78 31.5Q709-817 763-763t85.5 127Q880-563 880-480.18q0 82.83-31.5 155.67Q817-251.67 763-197.46q-54 54.21-127 85.84Q563-80 480.18-80Zm.15-66.67q139 0 236-97.33t97-236.33q0-139-96.87-236-96.88-97-236.46-97-138.67 0-236 96.87-97.33 96.88-97.33 236.46 0 138.67 97.33 236 97.33 97.33 236.33 97.33ZM480-480Z"/></svg>
               <a
                 style="text-decoration: none; color: black"
                 href="./cadastro-remedios.html"
-                >Adicionar Remedio</a
+                >  Adicionar Remedio</a
               >
             </button>
           </div>
@@ -177,7 +178,18 @@
                   <td>${medicamento.date}</td>
                   <td>${medicamento.horario}</td>
                   <td>${medicamento.observacao || " - "}</td> <!-- Verifica se observacoes está definido, se não, usa uma string vazia -->
-                `;
+                  <td><button class="btn remedios trash" style="background-color: #ecae2a; width: 100%; height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M267.33-120q-27.5 0-47.08-19.58-19.58-19.59-19.58-47.09V-740H160v-66.67h192V-840h256v33.33h192V-740h-40.67v553.33q0 27-19.83 46.84Q719.67-120 692.67-120H267.33Zm425.34-620H267.33v553.33h425.34V-740Zm-328 469.33h66.66v-386h-66.66v386Zm164 0h66.66v-386h-66.66v386ZM267.33-740v553.33V-740Z"/></svg></button></td>
+                  `;
+                // Captura do ID do medicamento ao clicar no botão "trash"
+  const trashButton = tr.querySelector(".btn.remedios.trash");
+  trashButton.addEventListener("click", () => {
+    console.log("ID do medicamento selecionado:", medicamento.id);
+    deleteMedicamento(medicamento.id);
+    // Remove a linha da tabela (interface)
+    tr.remove();
+  });
+
+  document.getElementById("medicamentos").appendChild(tr);
               document.getElementById("medicamentos").appendChild(tr);
             });
           })

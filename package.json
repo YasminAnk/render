@@ -10,11 +10,12 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "json-server": "^0.17.4",
+    "nodemailer": "^6.9.14",
     "resend": "^3.2.0",
-    "wbm": "^1.1.16",
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5"
+    "wbm": "^1.1.16"
   }
 }

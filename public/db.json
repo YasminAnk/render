@@ -41,6 +41,12 @@
       "senha": "123",
       "nome": "admin",
       "email": "admin@"
+    },
+    {
+      "id": "157ac481-7405-43b8-b408-94d9044b7686",
+      "senha": "123",
+      "nome": "yasmin ank",
+      "email": "yas@email"
     }
   ],
   "medicamentos": [
@@ -70,14 +76,6 @@
       "id": 4
     },
     {
-      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "nome": "edson",
-      "quantidade": "2",
-      "horario": "17:30",
-      "observacao": "tomar 2 comprimidos",
-      "id": 5
-    },
-    {
       "user_id": "8e0ed597-0c6a-4216-b61f-f9d9a09a7415",
       "nome": "dipirona",
       "quantidade": "1",
@@ -95,43 +93,11 @@
     },
     {
       "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "nome": "",
-      "quantidade": "",
-      "horario": "",
-      "observacao": "",
-      "id": 8
-    },
-    {
-      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
       "nome": "ibuprofeno",
       "quantidade": "2",
       "horario": "12:00",
       "observacao": "2 capsulas dissolvidas na colher",
       "id": 9
-    },
-    {
-      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "nome": "",
-      "quantidade": "",
-      "horario": "",
-      "observacao": "",
-      "id": 10
-    },
-    {
-      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "nome": "teste popup",
-      "quantidade": "1",
-      "horario": "18:00",
-      "observacao": "",
-      "id": 11
-    },
-    {
-      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "nome": "teste",
-      "quantidade": "12",
-      "horario": "08:00",
-      "observacao": "",
-      "id": 12
     },
     {
       "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
@@ -141,6 +107,33 @@
       "horario": "09:00",
       "observacao": "",
       "id": 13
+    },
+    {
+      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "nome": "dipirona",
+      "quantidade": "3",
+      "date": "2024-06-24",
+      "horario": "10:00",
+      "observacao": "",
+      "id": 14
+    },
+    {
+      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "nome": "ferro",
+      "quantidade": "1",
+      "date": "2024-06-24",
+      "horario": "10:00",
+      "observacao": "1 colher",
+      "id": 15
+    },
+    {
+      "user_id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "nome": "ibuprofeno",
+      "quantidade": "1",
+      "date": "2024-06-24",
+      "horario": "13:00",
+      "observacao": "1 capsula",
+      "id": 16
     }
   ],
   "dicas": [
@@ -159,10 +152,46 @@
   ],
   "tutoriais": [
     {
+      "titulo": "Como enviar e responder E-mails no Gmail.",
+      "texto": "<p>1. No computador, acesse o Gmail.</p><p>2. Na parte superior esquerda, clique no símbolo  <img style=\"width: 22px; height: 22px;\" src=\"//storage.googleapis.com/support-kms-prod/ez5AQYTSwwalQx9hVK7N2sg35g7DL7d63NPa\" width=\"8px\" height=\"8px\" alt=\"\" data-mime-type=\"image/png\">.</p><p>3. Adicione destinatários no campo \"Para\".</p><p>4. Adicione um assunto.</p><p>5. Escreva a sua mensagem.</p><p>6. Na parte inferior da página, clique em <b>Enviar</b>.</p><br>",
+      "video": "https://www.youtube.com/embed/zSAHLP7Vz7c?si=NGBKvTHk_92Vxl44",
+      "avaliacao": 3.5,
+      "id": 5
+    },
+    {
+      "titulo": "Como criar uma conta no Facebook.",
+      "texto": "<p>1. Acesse <a href=\"https://www.facebook.com/\" target=\"_blank\">facebook.com</a> e clique em <b>Criar nova conta</b>.</p><p>2. Insira seu nome, email ou número do celular, senha, data de nascimento e gênero.</p><p>3. Clique em <b>Cadastrar-se</b>.</p><p>4. Para terminar de criar sua conta, você precisará confirmar seu email ou número de celular.</p>",
+      "video": "https://www.youtube.com/embed/Y_yBtsMG--c?si=rvWwFncRH11rpftH1",
+      "avaliacao": 3.5,
+      "id": 6
+    },
+    {
       "titulo": "Como adicionar contatos no Whatsapp.",
-      "texto": "Precisa adicionar um novo contato? Ou adicionou um novo numero masnao está encontrando a pessoa no Whatsapp?<br/> Existem várias maneiras de adicionar um contato:",
+      "texto": "Precisa adicionar um novo contato? Ou adicionou um novo numero mas não está encontrando a pessoa no Whatsapp? <br/><br/>Existem várias maneiras de adicionar um contato:<br/><br/><b>Adicionando contato pela agenda do seu celular</b><div class=\"conteudo\"><p>1. No menu de aplicativos, pressione <b>Contatos</b>.</p><p>2. Pressione <b>Novo contato</b> ou <b>Novo</b>.</p><p>3. Insira o nome e o número do telefone do contato e, em seguida, pressione <b>SALVAR</b>.</p><p>4. O contato deve aparecer automaticamente na lista de contatos do WhatsApp. Se o contato não aparecer, abra o WhatsApp e pressione <b>Nova conversa > Opções > Recarregar contatos</b>.</p></div><br/><p>Se mesmo assim não aparecer, tente o passo abaixo:</p><br/><b>Adicionar contato ao criar uma nova conversa</b><br /><div class=\"conteudo\"><p>1. Toque na aba <b>Conversas</b>.</p><p>2. Toque no ícone<img style=\"height: 50px; width: 50px\" src=\"https://static.xx.fbcdn.net/assets/?revision=1081416319613196&amp;name=android-new-chat&amp;density=1\" /> e, em seguida, em <b>Novo contato</b>.</p></div><br />",
       "video": "https://www.youtube.com/embed/tUM7hmdesBw?si=RDtqRxwa918HLHzh",
-      "avaliacao": 3.5
+      "avaliacao": 3.5,
+      "id": 7
+    },
+    {
+      "titulo": "Como excluir mensagens e conversas no Whatsapp.",
+      "texto": "<div class=\"conteudo\"><p>1. Na aba <b>Conversas</b>, toque e segure a conversa que você deseja apagar.</p><p>2. Toque no ícone da lixeira e, em seguida, em APAGAR.</p></div><br><br><b>Apagar mensagem para todos</b><div class=\"conteudo\"><p>1. No WhatsApp, abra a conversa em que você enviou a mensagem que deseja apagar.</p><p>2. Toque e segure a mensagem. Você também pode selecionar e apagar várias mensagens que você mesmo enviou de uma só vez.</p><p>2. Toque no ícone da lixeira e, em seguida, em APAGAR PARA TODOS.</p></div><br><p><a href=\"https://faq.whatsapp.com/search?helpref=search&query=APAGAR\">Clique aqui</a> para ler mais conteúdos de mensagens no Whatsapp.</p><br>",
+      "video": "https://www.youtube.com/embed/AZNAPDTu4sI?si=qkDTobLlkbpeCEfX",
+      "avaliacao": 3.5,
+      "id": 8
+    },
+    {
+      "titulo": "Como encaminhar mensagens no Whatsapp.",
+      "texto": "<div class=\"conteudo\"><p>1. Em uma conversa individual ou em grupo, toque e segure a mensagem que você deseja encaminhar. <br><b>*</b>(Para encaminhar várias mensagens de uma só vez, toque em outras mensagens após selecionar a primeira).</p><p>2. Toque em <b>Encaminhar</b>.</p><p>3. Pesquise ou selecione as conversas individuais ou em grupo para as quais você deseja encaminhar as mensagens.</p><p>4. Toque em <b> Enviar</b>.</p></div><br><br><b>Observações:</b><p>Você também pode encaminhar arquivos de mídia, localizações ou contatos para não precisar carregá-los novamente.</p><p>Toda mensagem que você encaminhar e que não tiver sido criada por você será sinalizada com a etiqueta *Encaminhada* para você e para todos que receberem a mensagem.</p><br><br><b>Responder uma mensagem</b><div class=\"conteudo\"><p>1. Deslize a mensagem para a direita.</p><p>2. Insira sua resposta e, em seguida, toque em <b> Enviar</b>.</p></div><br><p><a href=\"https://faq.whatsapp.com/search?helpref=search&query=mensagem&locale=pt_BR\">Clique aqui</a> para ler mais conteúdos de mensagens no Whatsapp.</p>",
+      "video": "https://www.youtube.com/embed/JoW-nOjo44E?si=L9aVqEWMN3M4fkCG",
+      "avaliacao": 3.5,
+      "id": 9
+    },
+    {
+      "titulo": "Como usar o status do Whatsapp.",
+      "texto": "<p>1. Toque em <b>Atualizações</b>.</p><p>2. Toque na sua foto do perfil.</p><p>3. Toque no ícone da galeria no canto inferior esquerdo da tela e selecione a foto desejada. Se preferir, você pode tirar uma foto.</p><p>4. Toque em <b> Enviar</b> para compartilhar sua atualização de status.</p><br><p><a href=\"https://faq.whatsapp.com/search?helpref=search&query=status&locale=pt_BR\">Clique aqui</a> para ler mais conteúdos de status no Whatsapp.</p>",
+      "video": "https://www.youtube.com/embed/lQB-NRn5X4Q?si=Vkfe40pmSlShYw90",
+      "avaliacao": 3.5,
+      "id": 10
     }
   ]
 }

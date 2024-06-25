@@ -8,7 +8,7 @@ let db_medicamentos = [];
 function initLoginApp() {
     const usuarioCorrenteJSON = sessionStorage.getItem("usuarioCorrente");
     if (!usuarioCorrenteJSON) {
-        //displayMessage("É necessário fazer login para verificar os medicamentos cadastrados!");
+        //displayMessage("É necessário fazer login para verificar os medicamentos cadastrados 1!");
         //window.location.href = "./login-page/login-page.html"; // Redireciona para a página de login
     } else {
         const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
@@ -64,12 +64,31 @@ function addMedicamento(nome, quantidade, date, horario, observacao) {
         .then((data) => {
             db_medicamentos.push(medicamento);
             console.log("Medicamento adicionado:", medicamento);
-            displayMessage("Medicamento inserido com sucesso");
+            //displayMessage("Medicamento inserido com sucesso");
         })
         .catch((error) => {
             console.error("Erro ao inserir medicamento via API:", error);
             displayMessage("Erro ao inserir medicamento");
         });
+}
+
+function deleteMedicamento(id){
+    fetch(`${apiUrl}/${id}`, {
+        method: "DELETE",
+    })
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error("Erro ao deletar medicamento");
+        }
+        return response.json();
+    })
+    .then(() => {
+        displayMessage("Medicamento deletado com sucesso");
+    })
+    .catch((error) => {
+        console.error("Erro ao deletar medicamento via API:", error);
+        displayMessage("Erro ao deletar medicamento");
+    });
 }
 
 // Função para exibir mensagens ao usuário
