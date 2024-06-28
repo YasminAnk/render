@@ -1,228 +1,208 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro de remédios</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    />
-    <link rel="stylesheet" href="/../css/styles-index.css" />
-    <link rel="stylesheet" href="/../css/styles-meus-remedios.css" />
-    <link rel="stylesheet" href="/../css/styles-remedios.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-    />
-  </head>
 
-  <body>
-    <header>
-      <span class="material-symbols-outlined seta"
-        ><a href="./cadastro-remedios.html">arrow_back</a></span
-      >
-      <nav class="navbar">
-        <div class="logo">
-          <img src="../../img/logo.png" alt="Logo 60+ Tech" />
-        </div>
-        <span class="detalhe-01"></span>
-        <span class="detalhe-02"></span>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="../index.html" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="../sobre-nos.html" class="nav-link">Sobre nós</a>
-          </li>
-          <li class="nav-item">
-            <a href="../usuario/perfil.html" class="nav-link">Meu Perfil</a>
-          </li>
-          <li class="nav-item">
-            <a
-              href="../registration page/registration page.html"
-              class="other-1"
-              class="nav-link"
-              >Registrar-se</a
-            >
-          </li>
-        </ul>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <div class="cards">
-        <div class="box conteudo">
-          <p
-            style="
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de remédios</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" />
+  <link rel="stylesheet" href="/../css/styles-index.css" />
+  <link rel="stylesheet" href="/../css/styles-meus-remedios.css" />
+  <link rel="stylesheet" href="/../css/styles-remedios.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+
+<body>
+  <header>
+    <span class="material-symbols-outlined seta"><a href="./cadastro-remedios.html">arrow_back</a></span>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../../img/logo.png" alt="Logo 60+ Tech" />
+      </div>
+      <span class="detalhe-01"></span>
+      <span class="detalhe-02"></span>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="../index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="../sobre-nos.html" class="nav-link">Sobre nós</a>
+        </li>
+        <li class="nav-item">
+          <a href="../usuario/perfil.html" class="nav-link">Meu Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a href="../registration page/registration page.html" class="other-1" class="nav-link">Registrar-se</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="cards">
+      <div class="box conteudo">
+        <p style="
               font-size: xx-large;
               padding-bottom: 20px;
               text-align: center;
-            "
-          >
-            Meus medicamentos
-          </p>
-          <div class="labels">
-            <table>
-              <thead>
-                <tr>
-                  <th><div class="label">NOME :</div></th>
-                  <th><div class="label">QUANTIDADE :</div></th>
-                  <th><div class="label">DATA :</div></th>
-                  <th><div class="label">HORÁRIO :</div></th>
-                  <th><div class="label">OBSERVAÇÕES:</div></th>
-                </tr>
-              </thead>
-              <tbody id="medicamentos" style="text-align: center">
-                <!-- Linhas da tabela serão inseridas aqui -->
-              </tbody>
-            </table>
-          </div>
-          <div class="form-buttons">
-            <button class="btn remedios">
-              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" style="padding-right: 1.5%;"><path d="M448.67-280h66.66v-164H680v-66.67H515.33V-680h-66.66v169.33H280V-444h168.67v164Zm31.51 200q-82.83 0-155.67-31.5-72.84-31.5-127.18-85.83Q143-251.67 111.5-324.56T80-480.33q0-82.88 31.5-155.78Q143-709 197.33-763q54.34-54 127.23-85.5T480.33-880q82.88 0 155.78 31.5Q709-817 763-763t85.5 127Q880-563 880-480.18q0 82.83-31.5 155.67Q817-251.67 763-197.46q-54 54.21-127 85.84Q563-80 480.18-80Zm.15-66.67q139 0 236-97.33t97-236.33q0-139-96.87-236-96.88-97-236.46-97-138.67 0-236 96.87-97.33 96.88-97.33 236.46 0 138.67 97.33 236 97.33 97.33 236.33 97.33ZM480-480Z"/></svg>
-              <a
-                style="text-decoration: none; color: black"
-                href="./cadastro-remedios.html"
-                >  Adicionar Remedio</a
-              >
-            </button>
-          </div>
+            ">
+          Meus medicamentos
+        </p>
+        <div class="labels">
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <div class="label">NOME :</div>
+                </th>
+                <th>
+                  <div class="label">QUANTIDADE :</div>
+                </th>
+                <th>
+                  <div class="label">DATA :</div>
+                </th>
+                <th>
+                  <div class="label">HORÁRIO :</div>
+                </th>
+                <th>
+                  <div class="label">OBSERVAÇÕES:</div>
+                </th>
+              </tr>
+            </thead>
+            <tbody id="medicamentos" style="text-align: center">
+              <!-- Linhas da tabela serão inseridas aqui -->
+            </tbody>
+          </table>
+        </div>
+        <div class="form-buttons">
+          <button class="btn remedios">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+              style="padding-right: 1.5%;">
+              <path
+                d="M448.67-280h66.66v-164H680v-66.67H515.33V-680h-66.66v169.33H280V-444h168.67v164Zm31.51 200q-82.83 0-155.67-31.5-72.84-31.5-127.18-85.83Q143-251.67 111.5-324.56T80-480.33q0-82.88 31.5-155.78Q143-709 197.33-763q54.34-54 127.23-85.5T480.33-880q82.88 0 155.78 31.5Q709-817 763-763t85.5 127Q880-563 880-480.18q0 82.83-31.5 155.67Q817-251.67 763-197.46q-54 54.21-127 85.84Q563-80 480.18-80Zm.15-66.67q139 0 236-97.33t97-236.33q0-139-96.87-236-96.88-97-236.46-97-138.67 0-236 96.87-97.33 96.88-97.33 236.46 0 138.67 97.33 236 97.33 97.33 236.33 97.33ZM480-480Z" />
+            </svg>
+            <a style="text-decoration: none; color: black" href="./cadastro-remedios.html"> Adicionar Remedio</a>
+          </button>
         </div>
       </div>
-    </main>
-    <footer>
-      <nav>
-        <ul>
-          <li>
-            <a class="contato" href=""
-              ><span class="material-icons orange">phone</span> Contato:
-            </a>
-          </li>
-          <li>
-            <a class="email" href=""
-              ><span class="material-symbols-outlined mail">mail</span>
-              60+tech@gmail.com</a
-            >
-          </li>
-          <li>
-            <a
-              class="githubLink"
-              href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t5-60tech"
-              target="_blank"
-            >
-              <i
-                class="fa fa-github"
-                style="font-size: 28px; color: #ecae2a"
-              ></i>
-              GitHub do projeto</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <p class="copyright">
-        2024 60+ TECH - Todos Direitos Reservados
-        <span class="material-icons md-18 orange">copyright</span>
-      </p>
-    </footer>
-    <script src="menu.js"></script>
-    <script src="./medicamentos.js"></script>
-    <script>
-      function exibe() {
-        // Popula a tabela com os registros do banco de dados
-        fetch(apiUrl)
-          .then((response) => {
-            console.log("Resposta da API:", response);
-            if (!response.ok) {
-              throw new Error("Erro ao buscar dados da API");
-            }
-            return response.json();
-          })
-          .then((data) => {
-            // Limpa o conteúdo atual da tabela
-            document.getElementById("medicamentos").innerHTML = "";
+    </div>
+  </main>
+  <footer>
+    <nav>
+      <ul>
+        <li>
+          <a class="contato" href=""><span class="material-icons orange">phone</span> Contato:
+          </a>
+        </li>
+        <li>
+          <a class="email" href=""><span class="material-symbols-outlined mail">mail</span>
+            60+tech@gmail.com</a>
+        </li>
+        <li>
+          <a class="githubLink" href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t5-60tech"
+            target="_blank">
+            <i class="fa fa-github" style="font-size: 28px; color: #ecae2a"></i>
+            GitHub do projeto</a>
+        </li>
+      </ul>
+    </nav>
+    <p class="copyright">
+      2024 60+ TECH - Todos Direitos Reservados
+      <span class="material-icons md-18 orange">copyright</span>
+    </p>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="./medicamentos.js"></script>
+  <script>
+    function exibe() {
+      // Popula a tabela com os registros do banco de dados
+      fetch(apiUrl)
+        .then((response) => {
+          console.log("Resposta da API:", response);
+          if (!response.ok) {
+            throw new Error("Erro ao buscar dados da API");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          // Limpa o conteúdo atual da tabela
+          document.getElementById("medicamentos").innerHTML = "";
 
-            // Obtém o usuário corrente
-            const usuarioCorrente = JSON.parse(
-              sessionStorage.getItem("usuarioCorrente"),
-            );
-            // Filtra os medicamentos com base no userId
-            const medicamentosDoUsuario = data.filter(
-              (medicamento) => medicamento.user_id === usuarioCorrente.id,
-            );
+          // Obtém o usuário corrente
+          const usuarioCorrente = JSON.parse(
+            sessionStorage.getItem("usuarioCorrente"),
+          );
+          // Filtra os medicamentos com base no userId
+          const medicamentosDoUsuario = data.filter(
+            (medicamento) => medicamento.user_id === usuarioCorrente.id,
+          );
 
-            // Itera sobre os dados dos medicamentos do usuário e cria linhas na tabela para cada um
-            medicamentosDoUsuario.forEach((medicamento) => {
-              const tr = document.createElement("tr");
-              tr.innerHTML = `
+          // Itera sobre os dados dos medicamentos do usuário e cria linhas na tabela para cada um
+          medicamentosDoUsuario.forEach((medicamento) => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
                   <td>${medicamento.nome}</td>
                   <td>${medicamento.quantidade}</td>
                   <td>${medicamento.date}</td>
                   <td>${medicamento.horario}</td>
                   <td>${medicamento.observacao || " - "}</td> <!-- Verifica se observacoes está definido, se não, usa uma string vazia -->
                   <td><button class="btn remedios trash" style="background-color: #ecae2a; width: 100%; height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M267.33-120q-27.5 0-47.08-19.58-19.58-19.59-19.58-47.09V-740H160v-66.67h192V-840h256v33.33h192V-740h-40.67v553.33q0 27-19.83 46.84Q719.67-120 692.67-120H267.33Zm425.34-620H267.33v553.33h425.34V-740Zm-328 469.33h66.66v-386h-66.66v386Zm164 0h66.66v-386h-66.66v386ZM267.33-740v553.33V-740Z"/></svg></button></td>
-                  `;
-                // Captura do ID do medicamento ao clicar no botão "trash"
-  const trashButton = tr.querySelector(".btn.remedios.trash");
-  trashButton.addEventListener("click", () => {
-    console.log("ID do medicamento selecionado:", medicamento.id);
-    deleteMedicamento(medicamento.id);
-    // Remove a linha da tabela (interface)
-    tr.remove();
-  });
-
-  document.getElementById("medicamentos").appendChild(tr);
-              document.getElementById("medicamentos").appendChild(tr);
+                   `;
+                   //<td><button class="btn remedios edit" style="background-color: #ecae2a; width: 100%; height: 100%;"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"><path d="M480-533.33q60 0 105.5 42.34t45.5 102.66-45.5 102.66-105.5 42.34-105.5-42.34-45.5-102.66 45.5-102.66T480-533.33ZM848-120q-20 0-35.5 14.34T798-80v66.67h131.67v131.66H798v131.67H666.67V216.67H535.34V85.33H666.67V-120ZM480 208q53.33 0 90.67 37.34T608 336t-37.34 90.67T480 464t-90.67-37.33T352 336t37.34-90.66T480 208ZM112-880q0-26.67 19-45.33t45.34-18.67h53.33v66.67H176q-13.34 0-22.67 9.33T144 32v53.34H-22.67q-13.33 0-22.66 9.33T-64 85.33V176H64V64q0-13.33 9.34-22.67T96 32h266.67v66.67H112V-880Zm0 800v-66.67h533.34v66.67ZM160-373.33h213.33V-160H160ZM160 42.34h213.33v213.33H160Z"/></svg></button></td>
+                 
+            // Captura do ID do medicamento ao clicar no botão "trash"
+            const trashButton = tr.querySelector(".btn.remedios.trash");
+            trashButton.addEventListener("click", () => {
+              console.log("ID do medicamento selecionado:", medicamento.id);
+              deleteMedicamento(medicamento.id);
+              // Remove a linha da tabela (interface)
+              tr.remove();
             });
-          })
-          .catch((error) => {
-            console.error(
-              "Erro ao ler medicamentos via API JSONServer:",
-              error,
-            );
-            alert("Erro ao buscar dados dos medicamentos");
+
+            document.getElementById("medicamentos").appendChild(tr);
+            document.getElementById("medicamentos").appendChild(tr);
           });
+        })
+        .catch((error) => {
+          console.error(
+            "Erro ao ler medicamentos via API JSONServer:",
+            error,
+          );
+          alert("Erro ao buscar dados dos medicamentos");
+        });
+    }
+
+    // Função para inicializar a página
+    function initPage() {
+      // Verifica se o usuário está logado
+      const usuarioCorrente = JSON.parse(
+        sessionStorage.getItem("usuarioCorrente"),
+      );
+      if (!usuarioCorrente) {
+        alert("Você precisa estar logado para acessar essa página");
+        window.location.href = "../login-page/login-page.html";
+        return; // Encerra a execução da função se o usuário não estiver logado
       }
 
-      // Função para inicializar a página
-      function initPage() {
-        // Verifica se o usuário está logado
-        const usuarioCorrente = JSON.parse(
-          sessionStorage.getItem("usuarioCorrente"),
-        );
-        if (!usuarioCorrente) {
-          alert("Você precisa estar logado para acessar essa página");
-          window.location.href = "../login-page/login-page.html";
-          return; // Encerra a execução da função se o usuário não estiver logado
-        }
+      // Exibe os medicamentos na tabela
+      exibe();
+    }
 
-        // Exibe os medicamentos na tabela
-        exibe();
-        //configura a funcao de disparar o email pelo clicl do botao
-        //const sendMailButton = document.getElementById("sendMail");
-        //sendMailButton.addEventListener("click", sendMail);
-      }
+    // Associa a função initPage ao evento de carga da página
+    window.addEventListener("load", initPage);
+  </script>
+</body>
 
-      // Associa a função initPage ao evento de carga da página
-      window.addEventListener("load", initPage);
-    </script>
-  </body>
 </html>

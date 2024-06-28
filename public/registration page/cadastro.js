@@ -54,6 +54,11 @@ function addUser (nome, email, senha) {
     // Cria um objeto de usuario para o novo usuario 
     let newId = generateUUID ();
     let usuario = { "id": newId, "senha": senha, "nome": nome, "email": email };
+    usuarioCorrente = {
+        nome: nome,
+        email: email,
+        id: usuario.id
+    };
 
     // Envia dados do novo usuário para ser inserido no JSON Server
     fetch(apiUrl, {
@@ -67,6 +72,7 @@ function addUser (nome, email, senha) {
         .then(data => {
             // Adiciona o novo usuário na variável db_usuarios em memória
             db_usuarios.push (usuario);
+            sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
             displayMessage("Usuário inserido com sucesso");
         })
         .catch(error => {

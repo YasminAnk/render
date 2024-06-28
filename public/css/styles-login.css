@@ -63,6 +63,7 @@ body {
   .input-box {
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
   }
   
   .input-box label {
@@ -78,6 +79,23 @@ body {
     border-radius: 5px;
   }
   
+  .input-box input[type="email"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: large;
+  }
+
+  .input-box input[type="password"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: large;
+    height: 50px;
+  }
+
   .continue-button {
     display: flex;
     justify-content: center;

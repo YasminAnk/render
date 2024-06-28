@@ -152,24 +152,30 @@
     <script src="./medicamentos.js"></script>
     <script>
       function salvaRemedio(event) {
-        //event.preventDefault();
-        
-        let nome = document.getElementById("nome").value;
-        let quantidade = document.getElementById("quantidade").value.toString();
-        let data = document.getElementById("data").value.toString();
-        let horario = document.getElementById("horario").value.toString();
-        let obs = document.getElementById("observacao").value;
+    event.preventDefault();
 
-        if(nome === "" || quantidade === "" || horario === "" || data === "" ){
-          alert("Preencha todos os campos obrigatórios");
-          return;
-        }else{
-          addMedicamento(nome, quantidade, data, horario, obs);
-          alert("Medicamento salvo com sucesso!");
-          window.location.href = "meus-remedios.html";
-        }
-       
-      }
+    let nome = document.getElementById("nome").value;
+    let quantidade = document.getElementById("quantidade").value.toString();
+    let data = document.getElementById("data").value.toString();
+    let horario = document.getElementById("horario").value.toString();
+    let obs = document.getElementById("observacao").value;
+
+    if (nome === "" || quantidade === "" || horario === "" || data === "") {
+        alert("Preencha todos os campos obrigatórios");
+        return;
+    } else {
+        addMedicamento(nome, quantidade, data, horario, obs)
+            .then(() => {
+                alert("Medicamento salvo com sucesso!");
+                window.location.href = "meus-remedios.html";
+            })
+            .catch((error) => {
+                console.error("Erro ao salvar medicamento:", error);
+                alert("Erro ao salvar medicamento. Por favor, tente novamente.");
+            });
+    }
+}
+
 
       // Chamando a função cadastrar medicamento após o clique do botão cadastrar
       document

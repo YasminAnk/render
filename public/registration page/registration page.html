@@ -1,201 +1,126 @@
-<!doctype html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        />
-        <link rel="stylesheet" href="./css/styles-index.css" />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
-        />
-        <title>Formulário Cadastro</title>
-    </head>
-
-    <body>
-        <header>
-            <button class="back-button">
-                <i class="material-icons">arrow_back</i>
-            </button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60+ Tech</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet" href="/css/styles-index.css">
+    <link rel="stylesheet" href="/css/styles-register.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+<body>
+    <header>
+        <span class="material-symbols-outlined seta">
+            <a href="../index.html">arrow_back</a>
+        </span>
+        <nav class="navbar">
             <div class="logo">
-                <img src="logo.png" alt="Logo 60+ Tech" />
+                <img src="../../img/logo.png" alt="Logo 60+ Tech">
             </div>
-            <nav class="navbar">
-                <span class="detalhe-01"></span>
-                <span class="detalhe-02"></span>
-                <ul class="nav-menu">
-                    <li class="nav-item">
-                        <a href="../index.html" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../sobre-nos.html" class="nav-link"
-                            >Sobre nós</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a href="../login-page/login-page.html" class="nav-link"
-                            >Login</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a href="" class="other-1" class="nav-link"
-                            >Registrar-se</a
-                        >
-                    </li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </header>
+            <span class="detalhe-01"></span>
+            <span class="detalhe-02"></span>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../sobre-nos.html" class="nav-link">Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../usuario/perfil.html" class="nav-link">Meu Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../registration page/registration page.html" class="nav-link other-1">Registrar-se</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
-        <div class="container">
-            <div class="form-image">
-                <img
-                    src="WhatsApp Image 2024-04-24 at 20.59.29_5bfaf316.jpg"
-                    alt="" style="width: 110%; height: 110%;"
-                />
-            </div>
+    <div class="container">
+        <div class="form-image">
+            <img src="register.jpg" alt="Imagem de cadastro">
+        </div>
+        <div class="form-container">
             <div class="form">
-                <form action="#">
+                <form action="#" id="registration-form" method="post">
                     <div class="form-header">
-                        <div class="title">
-                            <h1>CADASTRE-SE</h1>
-                        </div>
+                        <h1>FAÇA SEU CADASTRO</h1>
                     </div>
-
                     <div class="input-group">
                         <div class="input-box">
                             <label for="firstname">Nome Completo</label>
-                            <input
-                                id="firstname"
-                                type="text"
-                                required
-                            />
+                            <input id="firstname" type="text" required>
                         </div>
-
                         <div class="input-box">
                             <label for="email">E-mail</label>
-                            <input
-                                id="email"
-                                type="email"
-                                required
-                            />
+                            <input id="email" type="email" required>
                         </div>
-
                         <div class="input-box">
                             <label for="password">Senha</label>
-                            <input
-                                id="password"
-                                type="password"
-                                required
-                            />
+                            <input id="password" type="password" required>
                         </div>
-
                         <div class="input-box">
-                            <label for="confirmPassword"
-                                >Confirme sua Senha</label
-                            >
-                            <input
-                                id="confirmPassword"
-                                type="password"
-                                required
-                            />
+                            <label for="confirm-password">Confirmar Senha</label>
+                            <input id="confirm-password" type="password" required>
                         </div>
                     </div>
-
                     <div class="continue-button">
-                        <button id="cadastrar">CADASTRAR</button>
+                        <button id="cadastrar" type="submit">CADASTRAR</button>
                     </div>
-                    <p class="temlogin">Já tem login? Entre</p>
+                    <p class="temlogin">
+                        Já tem uma conta? <a href="../login-page/login-page.html">Faça login</a>
+                    </p>
                 </form>
             </div>
         </div>
-        <footer>
-            <nav>
-                <ul>
-                    <li>
-                        <a class="contato" href=""
-                            ><span class="material-icons orange">phone</span>
-                            Contato:
-                        </a>
-                    </li>
-                    <li>
-                        <a class="email" href=""
-                            ><span class="material-symbols-outlined mail"
-                                >mail</span
-                            >
-                            60+tech@gmail.com</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            class="githubLink"
-                            href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t5-60tech"
-                            target="_blank"
-                        >
-                            <i
-                                class="fa fa-github"
-                                style="font-size: 28px; color: #ecae2a"
-                            ></i>
-                            GitHub do projeto</a
-                        >
-                    </li>
-                </ul>
-            </nav>
-            <p class="copyright">
-                2024 60+ TECH - Todos Direitos Reservados
-                <span class="material-icons md-18 orange">copyright</span>
-            </p>
-        </footer>
+    </div>
 
-        <script src="./cadastro.js"></script>
-        <script>
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <a class="contato" href=""><span class="material-icons orange">phone</span> Contato:</a>
+                </li>
+                <li>
+                    <a class="email" href=""><span class="material-symbols-outlined mail">mail</span> 60+tech@gmail.com</a>
+                </li>
+                <li>
+                    <a class="githubLink" href="https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2024-1-pe1-t5-60tech" target="_blank">
+                        <i class="fa fa-github" style="font-size: 28px; color: #ecae2a;"></i> GitHub do projeto
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <p class="copyright">
+            2024 60+ TECH - Todos Direitos Reservados <span class="material-icons md-18 orange">copyright</span>
+        </p>
+    </footer>
 
-            function salvaLogin (event) {
-                  // Cancela a submissão do formulário para tratar sem fazer refresh da tela
-                  //event.preventDefault ();
-
-                  // Obtem os dados do formulário
-                  let nome   = document.getElementById('firstname').value;
-                  let email  = document.getElementById('email').value;
-                  let senha  = document.getElementById('password').value;
-                  let senha2 = document.getElementById('confirmPassword').value;
-                  if (senha != senha2) {
-                      alert ('As senhas informadas não conferem.');
-                      return
-                  }
-
-                  // Adiciona o usuário no banco de dados
-                  addUser (nome, email, senha);
-                  alert ('Usuário salvo com sucesso!');
-                    window.location.href = '../login-page/login-page.html';
+    <script src="./cadastro.js"></script>
+    <script>
+        function salvaLogin(event) {
+            event.preventDefault(); // Evita o envio do formulário (para exemplo aqui no assistente)
+            let nome = document.getElementById("firstname").value;
+            let email = document.getElementById("email").value;
+            let senha = document.getElementById("password").value;
+            let senha2 = document.getElementById("confirm-password").value;
+            if (senha != senha2) {
+                alert("As senhas informadas não conferem.");
+                return;
             }
-
-
-                // Associar salvamento ao botao
-                document.getElementById ('cadastrar').addEventListener ('click', salvaLogin);
-        </script>
-    </body>
+            addUser(nome, email, senha);
+            alert("Usuário cadastrado com sucesso!");
+            window.location.href = "../index.html";
+        }
+        document.getElementById("registration-form").addEventListener("submit", salvaLogin);
+    </script>
+</body>
 </html>

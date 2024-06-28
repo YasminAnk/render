@@ -21,7 +21,7 @@
 
 <body style="background-color: #e7fbff;">
     <header>
-        <span class="material-symbols-outlined seta"><a href="email.html">arrow_back</a></span>
+        <span class="material-symbols-outlined seta" id="backButton" style="cursor: pointer;" >arrow_back</span>
         <nav class="navbar">
             <div class="logo">
                 <img src="../../../img/logo.png" alt="Logo 60+ Tech">
@@ -123,6 +123,12 @@ function selectedTutorial() {
 
 // Listener para aguardar o carregamento completo da página
 window.addEventListener("load", selectedTutorial);
+function goBack() {
+    window.history.back();
+  }
+
+  // Listener para o evento de clique na seta de voltar
+  document.getElementById('backButton').addEventListener('click', goBack);
     </script>
 </body>
 

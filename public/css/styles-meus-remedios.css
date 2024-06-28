@@ -95,4 +95,27 @@ body {
       margin: 5px 0;
     }
   }
+
+  .btn.remedios.trash {
+    background-color: #ecae2a;
+    width: 100%;
+    height: 100%;
+    padding: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  
+  .btn.remedios.trash svg {
+    height: 40px;
+    width: 40px;
+  }
+  
+  /* Ajuste para o ícone do botão de lixeira */
+  .btn.remedios.trash svg path {
+    fill: #000; /* Cor do ícone */
+  }
   

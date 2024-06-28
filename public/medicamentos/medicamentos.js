@@ -34,8 +34,7 @@ function initLoginApp() {
 function addMedicamento(nome, quantidade, date, horario, observacao) {
     const usuarioCorrenteJSON = sessionStorage.getItem("usuarioCorrente");
     if (!usuarioCorrenteJSON) {
-        displayMessage("É preciso fazer login primeiro!");
-        return; // Retorna se não houver usuário logado
+        return Promise.reject(new Error("É preciso fazer login primeiro!"));
     }
     const usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
 
@@ -48,29 +47,30 @@ function addMedicamento(nome, quantidade, date, horario, observacao) {
         observacao: observacao,
     };
 
-    fetch(apiUrl, {
+    return fetch(apiUrl, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(medicamento),
     })
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error("Erro ao inserir medicamento");
-            }
-            return response.json();
-        })
-        .then((data) => {
-            db_medicamentos.push(medicamento);
-            console.log("Medicamento adicionado:", medicamento);
-            //displayMessage("Medicamento inserido com sucesso");
-        })
-        .catch((error) => {
-            console.error("Erro ao inserir medicamento via API:", error);
-            displayMessage("Erro ao inserir medicamento");
-        });
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error("Erro ao inserir medicamento");
+        }
+        return response.json();
+    })
+    .then((data) => {
+        db_medicamentos.push(medicamento);
+        console.log("Medicamento adicionado:", medicamento);
+        return Promise.resolve(); // Indica sucesso na adição do medicamento
+    })
+    .catch((error) => {
+        console.error("Erro ao inserir medicamento via API:", error);
+        return Promise.reject(error);
+    });
 }
+
 
 function deleteMedicamento(id){
     fetch(`${apiUrl}/${id}`, {
