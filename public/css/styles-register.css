@@ -80,6 +80,18 @@ body {
   border-radius: 5px;
 }
 
+.input-box input[type="email"] {
+  display: flex;
+  flex-direction: column;
+  border-color: #ccc; 
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #a5a3a3;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+}
 .continue-button {
   display: flex;
   justify-content: center;
