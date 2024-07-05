@@ -123,8 +123,13 @@ body {
 }
 
 footer {
-  height: 200px;
-  bottom: 0;
+  background-color: rgb(46, 45, 43);
+  color: white;
+  font-size: x-large;
+  height: 200px; /* Altura fixa do footer */
   width: 100%;
-  margin-top: auto;
+  margin-top: auto; /* Empurra o footer para o rodapé */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
