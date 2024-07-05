@@ -275,15 +275,14 @@ margin-left: 170px;
 
 footer {
   background-color: rgb(46, 45, 43);
+  display: flex;
+  align-items: center;
   color: white;
   font-size: x-large;
-  height: 150px;
-  margin-top: auto; /* Empurra o footer para o rodapé */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 130px;
+  bottom: 0;
+  display: grid;
 }
-
 
 ul {
   list-style: none;
