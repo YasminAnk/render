@@ -40,9 +40,7 @@
           <li class="nav-item">
             <a href="../sobre-nos.html" class="nav-link">Sobre nós</a>
           </li>
-          <li class="nav-item">
-            <a href="../usuario/perfil.html" class="nav-link">Meu Perfil</a>
-          </li>
+          <li class="nav-item" id="login" ><a href="./login-page/login-page.html"  class="nav-link">Login</a></li>
           <li class="nav-item">
             <a
               href="../registration page/registration page.html"
@@ -136,6 +134,22 @@
 
     <script src="menu.js"></script>
     <script src="./script.js"></script>
+    <script>
+        // Função para inicializar a página
+function initPage() {
+  // Verifica se há um usuário corrente no sessionStorage
+  const usuarioCorrenteJSON = sessionStorage.getItem("usuarioCorrente");
+  if (!usuarioCorrenteJSON) {
+    // Se não houver usuário corrente, exibe o link de login
+    document.getElementById('login').innerHTML = '<a href="./login-page/login-page.html" class="nav-link">Login</a>';
+  } else {
+    // Se houver usuário corrente, exibe o link de perfil
+    document.getElementById('login').innerHTML = '<a href="./usuario/perfil.html" class="nav-link">Meu Perfil</a>';
+  }
+}
+     // Listener para o evento de carregamento da página
+window.addEventListener("load", initPage);   
+    </script>
 </body>
 
 </html>
