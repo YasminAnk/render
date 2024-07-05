@@ -150,6 +150,11 @@ function initPage() {
   } else {
     // Se houver usuário corrente, exibe o link de perfil
     document.getElementById('login').innerHTML = '<a href="./usuario/perfil.html" class="nav-link">Meu Perfil</a>';
+    // Adiciona o novo estilo CSS styles-index2.css que arruma o Header
+    const linkElement = document.createElement('link');
+    linkElement.rel = 'stylesheet';
+    linkElement.href = './css/styles-index2.css';
+    document.head.appendChild(linkElement);
   }
 }
 
