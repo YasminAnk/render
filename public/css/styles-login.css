@@ -83,6 +83,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: large;
+  width: 100%;
 }
 
 .input-box input[type="password"] {
