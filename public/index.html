@@ -164,7 +164,7 @@ function exibe(event) {
     })
     .then(data => {
       const usuarioCorrente = JSON.parse(sessionStorage.getItem("usuarioCorrente"));
-      const medicamentosDoUsuario = data.filter(medicamento => medicamento.user_id === usuarioCorrente.id && medicamento.date === "2024-06-24");
+      const medicamentosDoUsuario = data.filter(medicamento => medicamento.user_id === usuarioCorrente.id && medicamento.date === "2024-07-05");
       const tbody = document.getElementById("medicamentos");
       tbody.innerHTML = ""; // Limpa o conteúdo atual da tabela
       medicamentosDoUsuario.forEach(medicamento => {
